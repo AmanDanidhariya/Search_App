@@ -1,0 +1,14 @@
+.trends_container{
+    margin: auto;
+    background-color: white;
+    margin-top: 1rem;
+    width:60%;
+    padding: 1rem 2rem;
+}
+.trends_card_container{
+    display: flex;
+    gap: 1.5em;
+}
+.trends_font{
+    font-size: 1.2rem;
+}

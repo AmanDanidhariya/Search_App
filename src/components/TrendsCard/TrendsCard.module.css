@@ -1,0 +1,11 @@
+.card_container{
+    width: 10rem;
+}
+.card_image{
+    cursor: pointer;
+border-radius: 5px;
+width: 9rem;
+height: 13rem;
+background-size: cover;
+}
+
