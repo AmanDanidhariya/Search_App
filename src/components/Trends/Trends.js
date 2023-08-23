@@ -19,9 +19,9 @@ const Trends = ({ data }) => {
         </div>
         <h4 className={style.trends_font}>Popular suggestions</h4>
         {suggestionList.map((item) => (
-          <div key={item.id} className={style.suggestions}>
+          <button key={item.id} className={style.suggestions}>
             {item}
-          </div>
+          </button>
         ))}
       </div>
     </>
