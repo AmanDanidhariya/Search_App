@@ -1,5 +1,7 @@
 import './App.css';
 import { faker } from "@faker-js/faker";
+import Logo from './components/Logo/Logo';
+import Searchbar from './components/Searcbar/Searchbar';
 
     function createRandomProduct () {
 	return {
@@ -15,16 +17,16 @@ import { faker } from "@faker-js/faker";
 
     let products5 = faker.helpers.multiple(createRandomProduct, { count: 10, });
 
-    console.log(products5);
 
 function App() {
-
-
-
     return (
-    <>
+    <div className='main_container'>
+    <div className='content'>
+        <Logo/>
+        <Searchbar/>
+    </div>
         
-    </>
+    </div>
   );
 }
 
