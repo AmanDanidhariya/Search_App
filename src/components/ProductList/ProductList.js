@@ -1,13 +1,15 @@
-import React from 'react'
-import ProductCard from '../ProductCard/ProductCard'
+import React from "react";
+import style from "./ProductList.module.css"
+import ProductCard from "../ProductCard/ProductCard";
 
-const ProductList = ({data}) => {
+const ProductList = ({ data }) => {
   return (
     <>
-    <div>ProductList</div>
-    <ProductCard data={data}/>
+      <div className={style.productList}>
+        <ProductCard data={data} />
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default ProductList
+export default ProductList;

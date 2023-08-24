@@ -1,0 +1,6 @@
+.Product_container{
+    display: flex;
+    background-color: white;
+    padding: 1rem;
+    margin-top: 1rem;
+}

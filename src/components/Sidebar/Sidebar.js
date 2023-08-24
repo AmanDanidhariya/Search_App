@@ -8,6 +8,7 @@ const Sidebar = () => {
     
   return (
     <div className={style.sidebar_container}>
+     <div className={style.search_result}>Search Results</div>
         <FilterType filterHeader="Brand" filterTypeData={brandArray}/>
         <FilterType filterHeader="Price Range" filterTypeData={priceRangeArray}/>
     </div>

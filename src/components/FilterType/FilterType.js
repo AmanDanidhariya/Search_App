@@ -5,13 +5,12 @@ const FilterType = ({filterHeader ,filterTypeData}) => {
   return (
     <div className={style.filter_container}>
         <p className={style.header}>{filterHeader}</p>
-        {filterTypeData.map((item)=>(
-            <label key={item.id} className={style.filter_label}>
+        {filterTypeData.map((item ,i)=>(
+            <label key={i} className={style.filter_label}>
                 <input type="checkbox"  value={item}/>
-                {item}
+                &nbsp;{item}
             </label>
         ))}
-        
     </div>
   )
 }

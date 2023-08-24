@@ -1,15 +1,15 @@
 import React from "react";
+import style from "./ProductPage.module.css"
 import Sidebar from "../Sidebar/Sidebar";
 import ProductList from "../ProductList/ProductList";
 
 const ProductPage = ({ data }) => {
   return (
-    <>
-      <div>ProductPage</div>
+    <> 
+    <div className={style.Product_container}>
       <Sidebar />
-      <div>
-        <ProductList data={data} />
-      </div>
+      <ProductList data={data} />
+    </div>
     </>
   );
 };

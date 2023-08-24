@@ -15,6 +15,7 @@ function trendsProduct() {
     productAdjective: faker.commerce.productAdjective(),
     productName: faker.commerce.productName(),
     image: faker.image.url(),
+    // fakeRating : faker.random.number({ min: 1, max: 5 }),
   };
 }
 
