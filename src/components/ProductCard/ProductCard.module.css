@@ -31,13 +31,14 @@ gap:10px;
   }
   .view_product_button{
     width: 100%;
-    padding: 10px 12px;
+    padding: 10px 11px;
     background-color: rgb(68, 68, 238, 0.8);
     border: none;
     color: white;
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3 ease;
+    margin-left: 4px;
   }
   .product_overlay{
     position: absolute;
@@ -56,4 +57,13 @@ gap:10px;
     bottom: 0;
     opacity: 0.7;
     z-index: 2;
+  }
+  .heart{
+    top:10px;
+    right: 10px;
+    position: absolute;
+    border:none;
+    outline: none;
+    background-color: transparent;
+    font-size: 1.5rem;
   }
