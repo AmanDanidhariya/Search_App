@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import ProductPage from "./components/Product/ProductPage";
 
 function trendsProduct() {
+
   return{
     id: faker.string.uuid(),
     product: faker.commerce.product(),
@@ -15,17 +16,20 @@ function trendsProduct() {
     productAdjective: faker.commerce.productAdjective(),
     productName: faker.commerce.productName(),
     image: faker.image.url(),
-    // fakeRating : faker.random.number({ min: 1, max: 5 }),
+    fakeRating : faker.string.numeric({ min: 1, max: 5 }),
   };
 }
+  console.log(faker);
 
-let ProductsArray = faker.helpers.multiple(trendsProduct, { count: 20 });
+let productsArray = faker.helpers.multiple(trendsProduct, { count: 20 });
 
 
 function App() {
   const [searchQuery, setSearchQuery] = useState(null);
   const [showLatestTrends, setShowLatestTrends] = useState(false);
-  const [Products] = useState(ProductsArray);
+  const [products] = useState(productsArray);
+  
+  console.log(products);
 
   const handleSearchQueryChange = (queryData) => {
     setSearchQuery(queryData);
@@ -54,8 +58,8 @@ function App() {
         onBlur={handleBlurSearch}
         onSearchQueryChange={handleSearchQueryChange}
       />
-      {showLatestTrends && <Trends data={Products} />}
-      <ProductPage data={Products}/>
+      {showLatestTrends && <Trends data={products} />}
+      <ProductPage data={products}/>
     </div>
   );
 }

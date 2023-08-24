@@ -32,7 +32,7 @@ gap:10px;
   .view_product_button{
     width: 100%;
     padding: 10px 11px;
-    background-color: rgb(68, 68, 238, 0.8);
+    background-color: rgb(68, 68, 238,0.7);
     border: none;
     color: white;
     font-weight: 600;
@@ -67,3 +67,4 @@ gap:10px;
     background-color: transparent;
     font-size: 1.5rem;
   }
+ 
