@@ -1,13 +1,17 @@
 import React from "react";
 import Sidebar from "../Sidebar/Sidebar";
+import ProductList from "../ProductList/ProductList";
 
-const ProducPage = () => {
+const ProductPage = ({ data }) => {
   return (
     <>
-      <div>ProducPage</div>
+      <div>ProductPage</div>
       <Sidebar />
+      <div>
+        <ProductList data={data} />
+      </div>
     </>
   );
 };
 
-export default ProducPage;
+export default ProductPage;

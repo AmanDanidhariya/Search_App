@@ -54,7 +54,7 @@ function App() {
         onSearchQueryChange={handleSearchQueryChange}
       />
       {showLatestTrends && <Trends data={Products} />}
-      <ProductPage/>
+      <ProductPage data={Products}/>
     </div>
   );
 }

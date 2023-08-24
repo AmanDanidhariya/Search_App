@@ -1,10 +1,12 @@
 import React from 'react'
+import ProductCard from '../ProductCard/ProductCard'
 
-const ProductList = () => {
+const ProductList = ({data}) => {
   return (
-    <div>
-    
-    </div>
+    <>
+    <div>ProductList</div>
+    <ProductCard data={data}/>
+    </>
   )
 }
 
