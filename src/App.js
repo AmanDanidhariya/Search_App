@@ -27,20 +27,29 @@ let productsArray = faker.helpers.multiple(trendsProduct, { count: 20 });
 function App() {
   const [searchQuery, setSearchQuery] = useState(null);
   const [showLatestTrends, setShowLatestTrends] = useState(false);
-  const [products] = useState(productsArray);
+  const [products , setProductsData] = useState(productsArray);
   
   console.log(products);
 
   const handleSearchQueryChange = (queryData) => {
     setSearchQuery(queryData);
     //if searchQuery has length showLatestTrends will be false
-    setShowLatestTrends(queryData.length === 0);
+    // setShowLatestTrends(queryData.length === 0);
+    const filteredProducts = productsArray.filter((product)=>
+    product.productName.toLowerCase().includes(queryData.toLowerCase())
+    );
+
+      setProductsData(filteredProducts);
+
+    if(queryData.length){
+      setShowLatestTrends(false);
+    }else{
+      setShowLatestTrends(true)
+    }
+
+    setProductsData(filteredProducts)
   };
 
-  useEffect(()=>{
-    console.log(searchQuery);
-  },[searchQuery]);
-  
 
   const handleTrends = () => {
     setShowLatestTrends(!showLatestTrends);
@@ -57,8 +66,9 @@ function App() {
         onFocus={handleTrends}
         onBlur={handleBlurSearch}
         onSearchQueryChange={handleSearchQueryChange}
+
       />
-      {showLatestTrends && <Trends data={products} />}
+      {showLatestTrends && <Trends data={productsArray} />}
       <ProductPage data={products}/>
     </div>
   );

@@ -1,4 +1,9 @@
 .trends_container {
+  position: absolute;
+  z-index: 99;
+  left: 20%;
+  top:16%;
+  opacity: 0.9;
   margin: auto;
   background-color: white;
   margin-top: 1rem;
