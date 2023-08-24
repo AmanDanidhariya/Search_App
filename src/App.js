@@ -4,6 +4,7 @@ import Logo from "./components/Logo/Logo";
 import Searchbar from "./components/Searchbar/Searchbar";
 import Trends from "./components/Trends/Trends";
 import { useEffect, useState } from "react";
+import ProductPage from "./components/Product/ProductPage";
 
 function trendsProduct() {
   return{
@@ -17,13 +18,13 @@ function trendsProduct() {
   };
 }
 
-let ProductsArray = faker.helpers.multiple(trendsProduct, { count: 50 });
+let ProductsArray = faker.helpers.multiple(trendsProduct, { count: 20 });
 
 
 function App() {
   const [searchQuery, setSearchQuery] = useState(null);
   const [showLatestTrends, setShowLatestTrends] = useState(false);
-  const [Products , setProducts] = useState(ProductsArray);
+  const [Products] = useState(ProductsArray);
 
   const handleSearchQueryChange = (queryData) => {
     setSearchQuery(queryData);
@@ -53,6 +54,7 @@ function App() {
         onSearchQueryChange={handleSearchQueryChange}
       />
       {showLatestTrends && <Trends data={Products} />}
+      <ProductPage/>
     </div>
   );
 }

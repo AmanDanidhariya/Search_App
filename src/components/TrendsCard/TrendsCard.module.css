@@ -3,10 +3,16 @@
     cursor: pointer;
 }
 .card_image{
-
 border-radius: 5px;
 width: 8rem;
 height: 11rem;
 background-size: cover;
+transition: transform 0.3s ease;
+}
+.card_image:hover{
+    transform: scale(1.1);
+}
+.card_name:hover{
+    color: gray;
 }
 
