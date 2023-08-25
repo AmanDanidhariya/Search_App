@@ -33,8 +33,6 @@ function App() {
 
   const handleSearchQueryChange = (queryData) => {
     setSearchQuery(queryData);
-    //if searchQuery has length showLatestTrends will be false
-    // setShowLatestTrends(queryData.length === 0);
     const filteredProducts = productsArray.filter((product)=>
     product.productName.toLowerCase().includes(queryData.toLowerCase())
     );

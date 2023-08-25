@@ -1,0 +1,16 @@
+.starFilter{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
+.gold{
+    color: gold;
+}
+.gray{
+    color: gray;
+}
+.mr{
+    margin:5px;
+}
