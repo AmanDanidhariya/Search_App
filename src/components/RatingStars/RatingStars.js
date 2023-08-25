@@ -11,6 +11,7 @@ const RatingStars = ({value}) => {
             marginRight: "5px",
             fontSize: '1rem',
           }}
+          
         >
           <FaStar/>
         </span>

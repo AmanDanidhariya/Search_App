@@ -49,7 +49,8 @@ const ProductCard = ({ data }) => {
             <span className={style.discount_price}>
               Rs. {discountedPrice.toFixed(0)}
             </span>
-            <RatingStars value={product.fakeRating}/>
+	      <span>{product.department}</span>
+              <RatingStars value={Math.floor(parseInt(product.fakeRating) / 2)}/>
           </div>
         );
       })}

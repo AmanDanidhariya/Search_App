@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import style from "./Searchbar.module.css";
 
 const Searchbar = ({onFocus , onBlur , onSearchQueryChange}) => {

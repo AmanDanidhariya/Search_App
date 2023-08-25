@@ -17,13 +17,15 @@ const StarFilter = ({
             checked={selectedRatings.includes(rating)}
             onChange={() => onRatingFilterChange(rating)}
           />
+          {/* generate gold star for selected rating */}
           {[...Array(rating)].map((_, index) => (
-            <span key={index} className={`star ${style.gold} ${style.mr}`}>
+            <span key={index} className={`${style.gold} ${style.mr}`}>
               <FaStar />
             </span>
           ))}
+          {/* generate gray star for remaining part */}
           {[...Array(5 - rating)].map((_, index) => (
-            <span key={index} className={`star ${style.gray} ${style.mr}`}>
+            <span key={index} className={`${style.gray} ${style.mr}`}>
               <FaStar />
             </span>
           ))}
