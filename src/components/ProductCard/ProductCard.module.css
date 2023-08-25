@@ -66,5 +66,11 @@ cursor: pointer;
     outline: none;
     background-color: transparent;
     font-size: 1.5rem;
+    cursor: pointer;
   }
- 
+  .department{
+    display: block;
+    padding: 9px  0px;
+    font-weight: 600;
+    color:rgb(126, 219, 100);
+  }

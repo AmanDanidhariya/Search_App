@@ -7,11 +7,11 @@ const RatingStars = ({value}) => {
         <span
           key={index}
           style={{
-            color: index < value ? 'gold' : 'white',
+            color: index < value ? 'gold' : 'gray',
             marginRight: "5px",
             fontSize: '1rem',
           }}
-          
+
         >
           <FaStar/>
         </span>

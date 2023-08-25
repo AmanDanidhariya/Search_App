@@ -23,7 +23,7 @@ const ProductPage = ({ data }) => {
       ? selectedRatings.filter((selected) => selected !== rating)
       : [...selectedRatings, rating];
     setSelectedRatings(updatedRatings);
-      // just undoes all filtering
+      // just undo's all filtering
   };
 
   const handleBrandFilterChange = (brand) => {
@@ -43,15 +43,15 @@ const ProductPage = ({ data }) => {
 
   useEffect(() => {
 
-      let brandmatches = [];
-      let ratingmatches = [];
-      let pricematches = [];
-
+      let brandMatches = [];
+      let ratingMatches = [];
+      let priceMatches = [];
+    
       if(selectedBrands.length) {
-	  brandmatches = data.filter(p => selectedBrands.includes(p.department));
+	  brandMatches = data.filter(p => selectedBrands.includes(p.department));
       } 
       if(selectedRatings.length) {
-	  ratingmatches = data.filter(p => selectedRatings.includes(Math.floor(parseInt(p.fakeRating) /2)));
+	  ratingMatches = data.filter(p => selectedRatings.includes(Math.floor(parseInt(p.fakeRating) /2)));
       }
       if(selectedPriceRange.length) {
 	  let rangeMap = {
@@ -59,7 +59,7 @@ const ProductPage = ({ data }) => {
 	      "250 To 500" : [250, 500],
 	      "500 To 1000" : [500, 1000]
 	  }
-	  pricematches =data.filter(p => { 
+	  priceMatches =data.filter(p => { 
 	      let ranges = selectedPriceRange.map(s => rangeMap[s])
 		  .flat()
 		  .sort((a,b) => a-b)
@@ -68,11 +68,10 @@ const ProductPage = ({ data }) => {
 	      return (p.price*0.9) > min && (p.price*0.9) < max;
 	  })
       }
-      // [[0, 500], [500, 1000]].filter(a => )
 
-      if (brandmatches.length || ratingmatches.length || pricematches.length) {
+      if (brandMatches.length || ratingMatches.length || priceMatches.length) {
 
-	  let all = [brandmatches, ratingmatches, pricematches];
+	  let all = [brandMatches, ratingMatches, priceMatches];
 
 	  all.sort((a,b) => a.length - b.length);
 

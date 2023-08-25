@@ -20,7 +20,7 @@ function trendsProduct() {
 }
 
 let productsArray = faker.helpers.multiple(trendsProduct, { count: 20 });
-console.log(productsArray);
+
 function App() {
   const [showLatestTrends, setShowLatestTrends] = useState(false);
   const [products, setProductsData] = useState(productsArray);
@@ -37,7 +37,6 @@ function App() {
     } else {
       setShowLatestTrends(true);
     }
-
     setProductsData(filteredProducts);
   };
 
